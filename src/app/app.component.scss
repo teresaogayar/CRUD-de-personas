@@ -1,0 +1,21 @@
+*{
+    background-color:  white;
+    font-family:'Courier New', Courier, monospace;
+}
+.menu{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: left;
+    text-align: left;
+    padding: 14px 16px;
+}
+.menu nav a{
+    display: flex;  
+    font-family:'Courier New', Courier, monospace;
+    color: rgba(100, 148, 237);
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    background-color: rgb(229, 232, 235);
+}
