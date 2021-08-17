@@ -10,6 +10,13 @@
     text-align: left;
     padding: 14px 16px;
 }
+.menu nav{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: left;
+    list-style-type: none;
+}
 .menu nav a{
     display: flex;  
     font-family:'Courier New', Courier, monospace;
@@ -18,4 +25,5 @@
     padding: 14px 16px;
     text-decoration: none;
     background-color: rgb(229, 232, 235);
+    border: 2px solid whitesmoke;
 }
