@@ -22,6 +22,8 @@ export class PersonaComponent implements OnInit {
     termination_date: ''
   }
 
+  public personas: any =[]
+
   constructor(public personaService: PersonasService){
     
   }
@@ -31,7 +33,10 @@ export class PersonaComponent implements OnInit {
 
     this.personaService.cargarUsuarios()
       .subscribe( resp =>{
-        console.log(resp);
+
+        console.log(resp); 
+        this.personas = resp;
+
       })
   }
 

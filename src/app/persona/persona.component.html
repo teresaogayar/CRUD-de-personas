@@ -1,19 +1,40 @@
 <h2>Personas</h2>
-<!--<ul class="personas">
-     Recorremos la lista de personas 
-    <li *ngFor='persona de Personas'> 
-        <span>{{persona.id}}</span>
-        <span>{{persona.user}}</span>
-        <span>{{persona.password}}</span>
-        <span>{{persona.name}}</span>
-        <span>{{persona.surname}}</span>
-        <span>{{persona.company_email}}</span>
-        <span>{{persona.personal.email}}</span>
-        <span>{{persona.city}}</span>
-        <span>{{persona.active}}</span>
-        <span>{{persona.created_date}}</span>
-        <span>{{persona.imagen_url}}</span>
-        <span>{{persona.terminated_date}}</span>
-    </li>
-</ul>-->
-<p>persona works!</p>
+<div class="row">
+    <div class="column">
+        <table>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>User</th>
+                    <th>Password</th>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Company email</th>
+                    <th>Personal email</th>
+                    <th>City</th>
+                    <th>Active</th>
+                    <th>Created date</th>
+                    <th>Image url</th>
+                    <th>Termination date</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let persona of personas'>
+                    <td>{{persona.id}}</td>
+                    <td>{{persona.user}}</td>
+                    <td>{{persona.password}}</td>
+                    <td>{{persona.name}}</td>
+                    <td>{{persona.surname}}</td>
+                    <td>{{persona.company_email}}</td>
+                    <td>{{persona.personal_email}}</td>
+                    <td>{{persona.city}}</td>
+                    <td>{{persona.active}}</td>
+                    <td>{{persona.created_date}}</td>
+                    <td>{{persona.imagen_url}}</td>
+                    <td>{{persona.terminated_date}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
