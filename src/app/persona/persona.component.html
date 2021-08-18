@@ -6,32 +6,26 @@
                 <tr>
                     <th>Id</th>
                     <th>User</th>
-                    <th>Password</th>
                     <th>Name</th>
                     <th>Surname</th>
                     <th>Company email</th>
                     <th>Personal email</th>
                     <th>City</th>
                     <th>Active</th>
-                    <th>Created date</th>
                     <th>Image url</th>
-                    <th>Termination date</th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor='let persona of personas'>
                     <td>{{persona.id}}</td>
                     <td>{{persona.user}}</td>
-                    <td>{{persona.password}}</td>
                     <td>{{persona.name}}</td>
                     <td>{{persona.surname}}</td>
                     <td>{{persona.company_email}}</td>
                     <td>{{persona.personal_email}}</td>
                     <td>{{persona.city}}</td>
                     <td>{{persona.active}}</td>
-                    <td>{{persona.created_date}}</td>
-                    <td>{{persona.imagen_url}}</td>
-                    <td>{{persona.terminated_date}}</td>
+                    <td>{{persona.image_url}}</td>
 
                 </tr>
             </tbody>
