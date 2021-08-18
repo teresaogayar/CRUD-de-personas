@@ -9,8 +9,8 @@ export class PersonasService{
     constructor( private httpClient: HttpClient){}
    
     cargarUsuarios(){
-        const url = 'http://localhost:3000/persons';
-        return this.httpClient.get<Persona>(url);
+        const url = 'http://localhost:3000/persons'; //url de la bd.json
+        return this.httpClient.get<Persona[]>(url);
     }
     
 }
