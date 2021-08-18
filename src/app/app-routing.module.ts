@@ -3,8 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PersonaComponent } from './persona/persona.component';
 
 const routes: Routes = [
-
-  { path: 'persona', component: PersonaComponent}
+  { path: 'lista_persona', component: PersonaComponent}
 ];
 
 @NgModule({
