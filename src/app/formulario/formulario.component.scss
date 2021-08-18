@@ -1,0 +1,61 @@
+h2{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family:'Courier New', Courier, monospace;
+}
+.formulario{
+    background-color: rgb(212, 223, 243);
+    border: 5px solid  rgba(100, 148, 237, 0.61) ;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+form{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: inherit;
+}
+.datos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0px 10px 0px 10px;
+    border-radius: inherit;
+    gap: 20px;
+    margin-top: 8px;
+    margin-bottom: 20px;
+}
+.datos div{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
+}
+.datos  div  input{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+.boxboton{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
+    margin-bottom: 8px; 
+    font-weight: bold;
+    background-color: white;
+}
+.boxcrear input{
+    background-color: rgba(215, 141, 238, 0.411);
+    border: 2px solid #ffffff; 
+}
+.boxlimpiar input{
+    background-color: wheat;
+    border: 2px solid #ffffff; 
+    
+}
