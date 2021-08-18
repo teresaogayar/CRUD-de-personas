@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Persona } from '../persona';
-
+import { PersonasService } from '../persona.service';
 @Component({
   selector: 'app-persona',
   templateUrl: './persona.component.html',
@@ -22,9 +22,17 @@ export class PersonaComponent implements OnInit {
     termination_date: ''
   }
 
-  constructor() { }
+  constructor(public personaService: PersonasService){
+    
+  }
 
+  //ciclo de vida de angular que se ejecuta despues del constructor
   ngOnInit(): void {
+
+    this.personaService.cargarUsuarios()
+      .subscribe( resp =>{
+        console.log(resp);
+      })
   }
 
 }
