@@ -1,58 +1,58 @@
 <h2>Formulario de personas</h2>
 <div class="formulario">
-    <form>
+    <form  [formGroup]="registerForm">
         <div class="datos">
-            <div>
+            <div class="form-group">
                 <label for="user">Usuario </label>
-                <input type="text" id="user">
+                <input type="text" id="user" class='form-control' formControlName="user">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="surname">Apellido </label>
-                <input type="text" id="surname">
+                <input type="text" id="surname" class='form-control' formControlName="surname">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="pass">Contraseña </label>
-                <input type="password" id="pass">
+                <input type="password" id="pass" class='form-control' formControlName="password">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="name">Nombre </label>
-                <input type="text" id="name">
+                <input type="text" id="name" class='form-control' formControlName="name">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="compemail">Correo de empresa </label>
-                <input type="email" id="compemail">
+                <input type="email" id="compemail" class='form-control' formControlName="company_email">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="personalemail">Correo personal </label>
-                <input type="email" id="personalemail">
+                <input type="email" id="personalemail" class='form-control' formControlName="personal_email">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="city">Ciudad </label>
-                <input type="text" id="city">
+                <input type="text" id="city" class='form-control' formControlName="city">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="active">Active</label>
-                <input type="checkbox" id="active">
+                <input type="checkbox" id="active" class='form-control' formControlName="active">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="created_date">Fecha creación </label>
-                <input type="date" id="created_date">
+                <input type="date" id="created_date" class='form-control' formControlName="created_date">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="image_url">URL imagen </label>
-                <input type="text" id="image">
+                <input type="text" id="image" class='form-control' formControlName="imagen_url">
             </div>
-            <div>
+            <div class="form-group">
                 <label for="termination_date">Fecha finalización </label>
-                <input type="date" id="termination_date">
+                <input type="date" id="termination_date" class='form-control' formControlName="termination_date">
             </div>
         </div>
         <div class="boxboton">
             <div class="boxcrear">
-                <input onclick="crear()" type="submit" value="Enviar">
+                <button class="submit" type="button"  (click)="enviar()">Enviar</button>
             </div>
             <div class="boxlimpiar">
-                <input onclick="limpiar()" type="submit" value="Limpiar">
+                <button class="limpia" type="button" (click)="limpiar()">Limpiar</button>
             </div>
         </div>
     </form>

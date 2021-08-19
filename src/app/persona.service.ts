@@ -13,4 +13,8 @@ export class PersonasService{
         return this.httpClient.get<Persona[]>(url);
     }
     
+    anadirUsuarios(){
+          const url = 'http://localhost:3000/persons'; //url de la bd.json
+        return this.httpClient.post<Persona[]>(url);
+    }
 }

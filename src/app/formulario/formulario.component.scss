@@ -51,14 +51,14 @@ form{
     gap: 8px;
     margin-bottom: 8px; 
     font-weight: bold;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0);
 }
-.boxcrear input{
-    background-color: rgba(215, 141, 238, 0.411);
+.crea{
+    background-color: rgba(149, 238, 141, 0.445);
     border: 2px solid #ffffff; 
 }
-.boxlimpiar input{
-    background-color: wheat;
+.limpia{
+    background-color: rgb(245, 222, 179);
     border: 2px solid #ffffff; 
     
 }

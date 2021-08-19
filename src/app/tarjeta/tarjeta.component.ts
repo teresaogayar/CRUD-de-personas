@@ -9,7 +9,10 @@ import { empezar, Persona } from '../persona';
   styleUrls: ['./tarjeta.component.scss']
 })
 export class TarjetaComponent implements OnInit {
+  // Usamos @Input para que el PADRE le de al HIJO un componente suyo
  @Input() objetop: Persona = empezar();
+
+ //Usaremos @Output en el caso contrario
  
   constructor() { }
 

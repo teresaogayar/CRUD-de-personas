@@ -7,6 +7,7 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
 import { PersonaComponent } from './persona/persona.component';
 import { FormularioComponent } from './formulario/formulario.component';
 import { TarjetaComponent } from './tarjeta/tarjeta.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { TarjetaComponent } from './tarjeta/tarjeta.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule, 
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
