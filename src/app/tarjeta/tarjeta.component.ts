@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { empezar, Persona } from '../persona';
+
+
 
 @Component({
   selector: 'app-tarjeta',
@@ -6,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tarjeta.component.scss']
 })
 export class TarjetaComponent implements OnInit {
-
+ @Input() objetop: Persona = empezar();
+ 
   constructor() { }
 
   ngOnInit(): void {

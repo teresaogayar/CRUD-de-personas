@@ -1,8 +1,18 @@
 <div class="dato-tarjeta">
-    <div>
-        <b>Usuario </b>
-        <b>Apellido </b>
-        <b>Ciudad </b>
-        <b>Estado </b>
-    </div>
+        <div class="titulo">
+            <b>Usuario </b>{{objetop.user}}
+        </div>
+        <div class="detalles">
+            <b>Apellido </b>{{objetop.surname}} 
+            <b>Ciudad </b>{{objetop.city}} 
+            <b>Fecha inicio </b>{{objetop.created_date}} 
+        </div>
+        <div class="boxbotones">
+            <button class="edita" color="warn">
+                Editar
+            </button>
+            <button class="borra" color="warn">
+                Borrar
+            </button>
+        </div>
 </div>

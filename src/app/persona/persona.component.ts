@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Persona } from '../persona';
 import { PersonasService } from '../persona.service';
 @Component({
@@ -24,7 +25,7 @@ export class PersonaComponent implements OnInit {
 
   public personas: Persona[] = [];
 
-  constructor(public personaService: PersonasService){
+  constructor(public personaService: PersonasService, public router: Router){
     
   }
 

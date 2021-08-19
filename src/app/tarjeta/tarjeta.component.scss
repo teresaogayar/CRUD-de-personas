@@ -4,13 +4,43 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    border:2px solid rgba(100, 148, 237, 0.397);
-    gap: 20px;
-    margin: 10px 0px 10px 0px;
+    background-color: rgb(212, 223, 243);
+    border: 5px solid  rgba(100, 148, 237, 0.61) ;
+    border-radius: 4px;
+    margin-top: 8px;
+    margin-bottom: 16px;
 }
-.dato-tarjeta div b{
+.titulo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 16px;
+}
+.detalles{
     display: flex;
     justify-content: left;
     flex-direction: row;
     align-items: center;
+    gap: 12px;
+}
+.boxbotones{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 8px;
+    margin-bottom: 8px; 
+    font-weight: bold;
+    background-color: rgb(212, 223, 243);
+}
+.edita{
+    background-color:rgba(149, 238, 141, 0.445);
+    border: 2px solid #ffffff; 
+    font-weight: bold;
+}
+.borra{
+    background-color:rgba(238, 141, 141, 0.356);
+    border: 2px solid #ffffff;
+    font-weight: bold;
 }

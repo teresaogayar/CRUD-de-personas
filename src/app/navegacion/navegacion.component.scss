@@ -31,9 +31,10 @@
 .navegacion{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: rgba(181, 202, 241, 0.39);
+    background-color: rgba(181, 202, 241, 0);
+    gap: 8px;;
 }
 .img1{
     width: 30px;
@@ -42,5 +43,9 @@
 }
 
 a{
+    background-color: rgba(181, 202, 241, 0);
+}
+
+b{
     background-color: rgba(181, 202, 241, 0);
 }

@@ -8,25 +8,11 @@ h2{
     flex-direction: column;
     align-items: center;
 }
-table{
+.tarjetas{
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    align-items: left;
-}
-
-thead tr{
-    display: flex;
-    justify-content: left;
     flex-direction: row;
     align-items: left;
-    gap: 2px;
-}
-thead th{
-    display: flex;
-    justify-content: left;
-    flex-direction: row;
-    align-items: left;
-    background-color: rgba(100, 148, 237, 0.397);
-    border:2px solid rgba(100, 148, 237, 0.397);
+    gap: 12px;
+    flex-wrap: wrap;
 }
