@@ -1,56 +1,84 @@
 {
-    "persons": [
-      {
-        "id": 10,
-        "user": "chuchi",
-        "password": "123341341341341",
-        "name": "Jesús",
-        "surname": "puente",
-        "company_email": "jesus.javier@bosonit.com",
-        "personal_email": "otro@gmail.com",
-        "city": "logrono",
-        "active": true,
-        "created_date": "1966-12-23",
-        "imagen_url": ""
-      },
-      {
-        "user": "Teresa24",
-        "surname": "Ogayar",
-        "password": "cfgvjvfjm",
-        "name": "Teresa",
-        "companyemail": "te4@empresa.com",
-        "personalemail": "te@gmail.com",
-        "city": "Jaén",
-        "active": true,
-        "createddate": "2021-08-01T00:00:00.000Z",
-        "image": "",
-        "id": 11
-      },
-      {
-        "user": "tereesilla",
-        "surname": {},
-        "password": "hola1234",
-        "name": "Tere",
-        "company_email": "te4@empresa.com",
-        "personal_email": "te1@gmail.com",
-        "city": "Granada",
-        "active": false,
-        "created_date": "2021-08-12T00:00:00.000Z",
-        "image_url": "image.url",
-        "id": 12
-      },
-      {
-        "user": "Albertillo",
-        "surname": "Vicente",
-        "password": "hola0987",
-        "name": "Alberto",
-        "company_email": "alberto@empresa.com",
-        "personal_email": "alberto@personal.com",
-        "city": "Jaén",
-        "active": false,
-        "created_date": "2021-08-01T00:00:00.000Z",
-        "image_url": "",
-        "id": 13
-      }
-    ]
-  }
+  "persons": [
+    {
+      "id": 10,
+      "user": "chuchi",
+      "password": "123341341341341",
+      "name": "Jesús",
+      "surname": "puente",
+      "company_email": "jesus.javier@bosonit.com",
+      "personal_email": "otro@gmail.com",
+      "city": "logrono",
+      "active": true,
+      "created_date": "1966-12-23",
+      "imagen_url": ""
+    },
+    {
+      "user": "Teresa24",
+      "surname": "Ogayar",
+      "password": "cfgvjvfjm",
+      "name": "Teresa",
+      "companyemail": "te4@empresa.com",
+      "personalemail": "te@gmail.com",
+      "city": "Jaén",
+      "active": true,
+      "createddate": "2021-08-01T00:00:00.000Z",
+      "image": "",
+      "id": 11
+    },
+    {
+      "user": "tereesilla",
+      "surname": {},
+      "password": "hola1234",
+      "name": "Tere",
+      "company_email": "te4@empresa.com",
+      "personal_email": "te1@gmail.com",
+      "city": "Granada",
+      "active": false,
+      "created_date": "2021-08-12T00:00:00.000Z",
+      "image_url": "image.url",
+      "id": 12
+    },
+    {
+      "user": "Albertillo",
+      "surname": "Vicente",
+      "password": "hola0987",
+      "name": "Alberto",
+      "company_email": "alberto@empresa.com",
+      "personal_email": "alberto@personal.com",
+      "city": "Jaén",
+      "active": false,
+      "created_date": "2021-08-01T00:00:00.000Z",
+      "image_url": "",
+      "id": 13
+    },
+    {
+      "user": "Joselito",
+      "password": "sdazgaed",
+      "name": "Jose",
+      "surname": "Gomez",
+      "company_email": "jo@empresa.com",
+      "personal_email": "jo@gmail.com",
+      "city": "Jaén",
+      "active": true,
+      "created_date": "2013-06-13",
+      "imagen_url": "image.png",
+      "termination_date": "2021-08-31",
+      "id": 14
+    },
+    {
+      "user": "Juanito",
+      "password": "adegvrfghb",
+      "name": "Juan",
+      "surname": "Perez",
+      "company_email": "ju@empresa.com",
+      "personal_email": "ju@gmail.com",
+      "city": "linares",
+      "active": true,
+      "created_date": "2021-07-28",
+      "imagen_url": "image.png",
+      "termination_date": "2021-08-31",
+      "id": 15
+    }
+  ]
+}

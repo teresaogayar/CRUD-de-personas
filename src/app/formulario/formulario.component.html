@@ -49,7 +49,9 @@
         </div>
         <div class="boxboton">
             <div class="boxcrear">
-                <button class="submit" type="button"  (click)="enviar()">Enviar</button>
+                <div *ngIf="this.botonPulsado">
+                    <button class="submit" type="button"  (click)="anadirPersona()">Enviar</button>
+                </div>
             </div>
             <div class="boxlimpiar">
                 <button class="limpia" type="button" (click)="limpiar()">Limpiar</button>

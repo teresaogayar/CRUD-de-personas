@@ -8,7 +8,7 @@
             <b>Fecha inicio </b>{{objetop.created_date}} 
         </div>
         <div class="boxbotones">
-            <button class="edita" color="warn">
+            <button class="edita" color="warn" [routerLink]="['/editar', objetop.id]">
                 Editar
             </button>
             <button class="borra" color="warn">
