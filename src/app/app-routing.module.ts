@@ -6,7 +6,8 @@ import { PersonaComponent } from './persona/persona.component';
 
 const routes: Routes = [
   { path: 'lista_persona', component: PersonaComponent},
-  { path: '', component: FormularioComponent}
+  { path: '', component: FormularioComponent},
+  { path:'editar/:id', component: FormularioComponent }
 ];
 
 @NgModule({

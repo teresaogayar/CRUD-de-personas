@@ -13,8 +13,10 @@ import { PersonasService } from '../persona.service';
 export class TarjetaComponent implements OnInit {
 // Usamos @Input para que el PADRE le de al HIJO un componente suyo
  @Input() objetop: Persona = empezar();
+
  //Usaremos @Output en el caso contrario
  @Output() enviar: EventEmitter<any> = new EventEmitter<any>();
+ 
  constructor(
    private personaService: PersonasService, 
    private route: Router

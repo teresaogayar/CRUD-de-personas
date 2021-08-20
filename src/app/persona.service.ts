@@ -14,6 +14,11 @@ export class PersonasService{
     cargarUsuarios(){
         return this.httpClient.get<Persona[]>(this.url);
     }
+
+    //Obtener un usuario
+    cargarUsuario(id: number){
+        return this.httpClient.get<Persona>(this.url + '/' + id);
+    }
     
     //Crear usuario
     addUser(persona: Persona){
@@ -22,7 +27,7 @@ export class PersonasService{
     }
 
     //Editar usuario
-    updateUser(persona: Persona, persona2: Persona){
+    updateUser(persona: Persona ){
         return this.httpClient.put<Persona>(this.url + '/' + persona.id, persona);
     }
 

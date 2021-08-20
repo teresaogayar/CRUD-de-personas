@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder} from '@angular/forms';
+import { FormBuilder } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { empezar, Persona } from '../persona';
 import { PersonasService } from '../persona.service';
@@ -19,33 +19,33 @@ export class FormularioComponent implements OnInit {
   @Output() personaEditada: Persona = empezar();
 
   constructor(
-    private formBuilder : FormBuilder, 
-    private router: ActivatedRoute, 
-    private personaService: PersonasService, 
+    private formBuilder: FormBuilder,
+    private router: ActivatedRoute,
+    private personaService: PersonasService,
     private route: Router
   ) { }
 
   //Cargamos valores por defecto en el formulario
   registerForm = this.formBuilder.group({
     user: [''],
-    password:  [''],
-    name:  [''],
-    surname:  [''],
-    company_email:  [''],
-    personal_email:  [''],
-    city:  [''],
+    password: [''],
+    name: [''],
+    surname: [''],
+    company_email: [''],
+    personal_email: [''],
+    city: [''],
     active: [true],
-    created_date:  [''],
-    imagen_url:  [''],
+    created_date: [''],
+    imagen_url: [''],
     termination_date: ['']
   });
 
-  enviar(){
+  enviar() {
     console.log(this.registerForm.value);
   }
 
   //patchValue actualiza los campos del formulario
-  limpiar(){
+  limpiar() {
     this.registerForm.patchValue({
       user: '',
       password: '',
@@ -62,12 +62,39 @@ export class FormularioComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.router.params.subscribe(
+      params => {
+        this.id = params['id']
+        console.log(this.id)
+      }
+    )
+
+
+    if(!this.id) return; 
+    this.personaService.cargarUsuario(this.id).subscribe(per =>{
+      console.log(per)
+      this.persona = per; 
+      this.registerForm.patchValue(per)
+    })
+    
+
   }
 
-  anadirPersona(): void{
+  //Si no existe añade, si  existe lo edita
+  guardar(){
+    if (!this.id) {
+      this.anadirPersona();
+    } else {
+      console.log("entra en editar")
+      this.editarPersona();
+    }
+  }
+
+
+  anadirPersona(): void {
     console.log(this.registerForm.value);
     this.persona = this.registerForm.value;
-    this.personaService.addUser(this.persona).subscribe(per=>{
+    this.personaService.addUser(this.persona).subscribe(per => {
       this.persona = per;
       this.personaAnadida.emit(this.persona)
       this.route.navigate(['/lista_personas']);
@@ -75,13 +102,18 @@ export class FormularioComponent implements OnInit {
   }
 
 
-  editarPersona(): void{
-    this.personaService.updateUser(this.persona, this.registerForm.value).subscribe(per=>
+  editarPersona(): void {
+    this.persona = this.registerForm.value
+    this.persona.id = this.id;
+    this.personaService.updateUser(this.registerForm.value).subscribe(per => {
+      this.persona = per; 
       this.route.navigate(['/lista_persona'])
-    )}
+    }
+
+    )
   }
 
-  
-  
 
+
+}
 
