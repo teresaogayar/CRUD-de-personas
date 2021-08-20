@@ -33,6 +33,6 @@ export class PersonasService{
 
     //Eliminar usuario
     deleteUser(id: number){
-        return this.httpClient.delete<any>(this.url + '/' + id)
+        return this.httpClient.delete<Persona>(this.url + '/' + id)
     }
 }

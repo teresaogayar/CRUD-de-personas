@@ -15,7 +15,7 @@ export class TarjetaComponent implements OnInit {
  @Input() objetop: Persona = empezar();
 
  //Usaremos @Output en el caso contrario
- @Output() enviar: EventEmitter<any> = new EventEmitter<any>();
+ @Output() enviarBorrado: EventEmitter<any> = new EventEmitter<any>();
  
  constructor(
    private personaService: PersonasService, 
@@ -31,9 +31,10 @@ export class TarjetaComponent implements OnInit {
   }
 
   borrarPersona(){
-    //this.enviar.emit(this.objetop.id)
+    this.route.navigate(['/lista_persona'])
     this.personaService.deleteUser(this.objetop.id).subscribe();
-    this.enviar.emit(this.objetop.id);
+    this.enviarBorrado.emit(this.objetop.id);
+    console.log("persona borrada")
 
   }
 
