@@ -102,7 +102,7 @@ export class FormularioComponent implements OnInit {
       this.persona = per;
       this.personaAnadida.emit(this.persona)
       this.route.navigate(['/lista_personas']);
-      this.mostrarNotificacion('Registro reallizado');
+      this.mostrarNotificacion('Registro realizado');
     })
   }
 

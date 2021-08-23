@@ -5,6 +5,7 @@
          class="flex-item"
          *ngFor="let persona of personas">
   
-         <app-tarjeta  [objetop]="persona"></app-tarjeta>
+ 
+    <app-tarjeta (enviarBorrado)="MensajeBorrarUsuario($event)" [objetop]="persona"></app-tarjeta>
     </div>
 </div>

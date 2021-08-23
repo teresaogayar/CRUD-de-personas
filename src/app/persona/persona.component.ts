@@ -47,6 +47,7 @@ export class PersonaComponent implements OnInit {
     this.router.navigate(['/crear'])
   }
 
-
-
+  MensajeBorrarUsuario(id: number){
+    this.personas = this.personas.filter(per => per.id!=id);
+  }
 }
