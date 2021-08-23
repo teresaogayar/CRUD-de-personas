@@ -1,5 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
+import { Observable } from "rxjs";
 import { Persona } from "./persona";
 
 @Injectable({
@@ -16,23 +17,23 @@ export class PersonasService{
     }
 
     //Obtener un usuario
-    cargarUsuario(id: number){
+    cargarUsuario(id: number): Observable<Persona>{
         return this.httpClient.get<Persona>(this.url + '/' + id);
     }
     
     //Crear usuario
-    addUser(persona: Persona){
+    addUser(persona: Persona): Observable<Persona>{
         console.log(persona)
         return this.httpClient.post<Persona>(this.url, persona);
     }
 
     //Editar usuario
-    updateUser(persona: Persona ){
+    updateUser(persona: Persona ): Observable<Persona>{
         return this.httpClient.put<Persona>(this.url + '/' + persona.id, persona);
     }
 
     //Eliminar usuario
-    deleteUser(id: number){
+    deleteUser(id: number): Observable<Persona>{
         return this.httpClient.delete<Persona>(this.url + '/' + id)
     }
 }
