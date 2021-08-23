@@ -1,5 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { empezar, Persona } from '../persona';
 import { PersonasService } from '../persona.service';
@@ -22,7 +23,8 @@ export class FormularioComponent implements OnInit {
     private formBuilder: FormBuilder,
     private router: ActivatedRoute,
     private personaService: PersonasService,
-    private route: Router
+    private route: Router,
+    private snackbar: MatSnackBar
   ) { }
 
   //Cargamos valores por defecto en el formulario
@@ -84,9 +86,11 @@ export class FormularioComponent implements OnInit {
   guardar(){
     if (!this.id) {
       this.anadirPersona();
+      this.limpiar();
     } else {
       console.log("entra en editar")
       this.editarPersona();
+      this.limpiar();
     }
   }
 
@@ -98,6 +102,7 @@ export class FormularioComponent implements OnInit {
       this.persona = per;
       this.personaAnadida.emit(this.persona)
       this.route.navigate(['/lista_personas']);
+      this.mostrarNotificacion('Registro reallizado');
     })
   }
 
@@ -107,13 +112,18 @@ export class FormularioComponent implements OnInit {
     this.persona.id = this.id;
     this.personaService.updateUser(this.registerForm.value).subscribe(per => {
       this.persona = per; 
-      this.route.navigate(['/lista_persona'])
+      this.route.navigate(['/lista_persona']);
+      this.mostrarNotificacion('Cambios guardados');
     }
 
     )
   }
 
-
+  mostrarNotificacion(mensaje: string){
+    this.snackbar.open(mensaje, '✔️',{
+      duration:2500
+    })
+  }
 
 }
 

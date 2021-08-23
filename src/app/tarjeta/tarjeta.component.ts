@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { empezar, Persona } from '../persona';
 import { PersonasService } from '../persona.service';
@@ -19,7 +20,8 @@ export class TarjetaComponent implements OnInit {
  
  constructor(
    private personaService: PersonasService, 
-   private route: Router
+   private route: Router,
+   private snackbar: MatSnackBar
   ) { }
 
 
@@ -34,8 +36,13 @@ export class TarjetaComponent implements OnInit {
     this.route.navigate(['/lista_persona'])
     this.personaService.deleteUser(this.objetop.id).subscribe();
     this.enviarBorrado.emit(this.objetop.id);
-    console.log("persona borrada")
+    this.mostrarNotificacionBorrado("Usuario borrado");
 
+  }
+  mostrarNotificacionBorrado(mensaje: string){
+    this.snackbar.open(mensaje, '🗑️',{
+      duration:2500
+    })
   }
 
 }
