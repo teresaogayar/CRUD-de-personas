@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContadorService } from '../contador.service';
 import { Persona } from '../persona';
 import { PersonasService } from '../persona.service';
 
@@ -27,9 +28,11 @@ export class PersonaComponent implements OnInit {
 
   public personas: Persona[] = [];
 
+  
   constructor(
     public personaService: PersonasService, 
-    public router: Router
+    public router: Router,
+    public contadorService: ContadorService
     ){}
 
   //ciclo de vida de angular que se ejecuta despues del constructor
@@ -49,5 +52,6 @@ export class PersonaComponent implements OnInit {
 
   MensajeBorrarUsuario(id: number){
     this.personas = this.personas.filter(per => per.id!=id);
+    this.contadorService.incrementar();
   }
 }

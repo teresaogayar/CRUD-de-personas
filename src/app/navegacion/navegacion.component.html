@@ -2,12 +2,19 @@
 
 </head>
 <body>
-    <div class="menu">
-        <nav>
-            <a routerLink="/">Menú principal</a>
-            <a routerLink="/lista_persona">Persona</a>
-        </nav>
+    <div class="menuprincipal">
+        <div class="menu">
+            <nav>
+                <a routerLink="/">Menú principal</a>
+                <a routerLink="/lista_persona">Persona</a>
+            </nav>
+        </div>
+        <div class="papelera">
+            <mat-icon><a>🗑️</a> </mat-icon> 
+            <b>{{cont}}</b>
+        </div>
     </div>
+    
     <div class="navegacion">
             <img src="https://image.flaticon.com/icons/png/512/1250/1250346.png" alt="addperson" class="img1">
             <a>Pulsa <b>Persona</b> para ver el listado de personas</a>

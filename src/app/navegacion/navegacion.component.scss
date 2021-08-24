@@ -2,6 +2,13 @@
     background-color:  white;
     font-family:'Courier New', Courier, monospace;
 }
+.menuprincipal{
+    display: flex;
+    justify-content:space-between;
+    flex-direction: row;
+    gap: 20px;
+}
+
 .menu{
     display: flex;
     justify-content: left;
@@ -9,6 +16,30 @@
     align-items: left;
     text-align: left;
     padding: 14px 16px;
+}
+.papelera{
+    display: flex;
+    justify-content: right;
+    flex-direction: row;
+    align-items: right;
+    gap: 8px;
+}
+mat-icon{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    background-color: rgba(100, 148, 237, 0.336);
+}
+.papelera b{
+    display: flex;
+    justify-content:right;
+    flex-direction: row;
+    align-items: center;
+    color: rgba(100, 148, 237);
 }
 .menu nav{
     display: flex;

@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { ContadorService } from '../contador.service';
 import { empezar, Persona } from '../persona';
 import { PersonasService } from '../persona.service';
 
@@ -21,7 +22,8 @@ export class TarjetaComponent implements OnInit {
  constructor(
    private personaService: PersonasService, 
    private route: Router,
-   private snackbar: MatSnackBar
+   private snackbar: MatSnackBar,
+   private contadorService: ContadorService
   ) { }
 
 
@@ -33,6 +35,16 @@ export class TarjetaComponent implements OnInit {
   }
 
   borrarPersona(){
+    /*let persons: Persona[] =[];
+    if(localStorage.getItem('persons')=== null){
+      persons.push(this.objetop);
+      localStorage.setItem('persons', JSON.stringify(this.objetop));
+    }else{
+      persons = JSON.parse(localStorage.setItem('persons'));
+      persons.push(this.objetop);
+      localStorage.setItem('persons', JSON.stringify(this.objetop));
+    }*/
+
     this.route.navigate(['/lista_persona'])
     this.personaService.deleteUser(this.objetop.id).subscribe();
     this.enviarBorrado.emit(this.objetop.id);
