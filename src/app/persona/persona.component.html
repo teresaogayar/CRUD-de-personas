@@ -1,11 +1,20 @@
 <h2>Personas</h2>
 <!-- Tarjetas  -->
-<div class="tarjetas" *ngIf="router.url === '/lista_persona'" >
-    <div
-         class="flex-item"
-         *ngFor="let persona of personas">
-  
- 
-    <app-tarjeta (enviarBorrado)="MensajeBorrarUsuario($event)" [objetop]="persona"></app-tarjeta>
+<div  *ngIf= "personas.length > 0 else nopersons">
+
+    <div class="tarjetas" *ngIf="router.url === '/lista_persona'" >
+        <div
+            class="flex-item"
+            *ngFor="let persona of personas">
+    
+    
+        <app-tarjeta (enviarBorrado)="MensajeBorrarUsuario($event)" [objetop]="persona"></app-tarjeta>
+        </div>
     </div>
+    
 </div>
+<!-- Cuando no hay datos en la lista -->
+    <ng-template #nopersons>
+        <div class="nopersons"><b>⚠️ No hay personas para mostrar</b></div>
+    </ng-template>
+

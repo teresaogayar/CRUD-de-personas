@@ -16,3 +16,10 @@ h2{
     gap: 12px;
     flex-wrap: wrap;
 }
+.nopersons{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: crimson;
+}

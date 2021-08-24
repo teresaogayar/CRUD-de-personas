@@ -1,88 +1,32 @@
 {
   "persons": [
     {
-      "user": "chuchi",
-      "password": "123341341341341",
-      "name": "Jesús",
-      "surname": "puente",
-      "company_email": "jesus.javier@bosonit.com",
-      "personal_email": "otro@gmail.com",
-      "city": "logrono",
-      "active": true,
-      "created_date": "1966-12-23",
-      "imagen_url": "",
-      "termination_date": "",
-      "id": 10
-    },
-    {
-      "user": "Tereesilla",
-      "password": "cfgvjvfjm",
+      "user": "tereesilla",
+      "password": "dszfgbrdfg",
       "name": "Teresa",
-      "surname": "Ogayar",
+      "surname": "Ogáyar",
       "company_email": "te4@empresa.com",
       "personal_email": "te@gmail.com",
-      "city": "Huelma",
+      "city": "Jaén",
       "active": true,
-      "created_date": "2021-08-04",
-      "imagen_url": "guapa.png",
-      "termination_date": "2021-08-31",
-      "id": 11
+      "created_date": "2021-08-05",
+      "imagen_url": "image.png",
+      "termination_date": "2021-09-04",
+      "id": 1
     },
     {
       "user": "Albertillo",
-      "password": "hola0987",
+      "password": "0987qwer",
       "name": "Alberto",
       "surname": "Vicente",
       "company_email": "alberto@empresa.com",
       "personal_email": "alberto@personal.com",
-      "city": "Jaén",
+      "city": "Granada",
       "active": true,
-      "created_date": "2021-07-27",
+      "created_date": "2021-07-26",
       "imagen_url": "image.png",
-      "termination_date": "2021-09-01",
-      "id": 13
-    },
-    {
-      "user": "Joselito",
-      "password": "sdazgaed",
-      "name": "Jose",
-      "surname": "Gomez",
-      "company_email": "jo@empresa.com",
-      "personal_email": "jo@gmail.com",
-      "city": "Jaén",
-      "active": true,
-      "created_date": "2013-06-13",
-      "imagen_url": "image.png",
-      "termination_date": "2021-08-31",
-      "id": 14
-    },
-    {
-      "user": "Juanito",
-      "password": "adegvrfghb",
-      "name": "Juan",
-      "surname": "Perez",
-      "company_email": "ju@empresa.com",
-      "personal_email": "ju@gmail.com",
-      "city": "linares",
-      "active": true,
-      "created_date": "2021-07-28",
-      "imagen_url": "image.png",
-      "termination_date": "2021-08-31",
-      "id": 15
-    },
-    {
-      "user": "RocioD",
-      "password": "adgdfg",
-      "name": "Rocio",
-      "surname": "Domingo",
-      "company_email": "ro@empresa.com",
-      "personal_email": "ro@gmail.com",
-      "city": "Jaen",
-      "active": false,
-      "created_date": "2002-02-04",
-      "imagen_url": "image.png",
-      "termination_date": "2021-08-31",
-      "id": 16
+      "termination_date": "2021-09-05",
+      "id": 2
     }
   ]
 }
