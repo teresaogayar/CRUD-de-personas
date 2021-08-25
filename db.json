@@ -2,21 +2,21 @@
   "persons": [
     {
       "user": "tereesilla",
-      "password": "dszfgbrdfg",
+      "password": "asdf1234",
       "name": "Teresa",
       "surname": "Ogáyar",
       "company_email": "te4@empresa.com",
       "personal_email": "te@gmail.com",
       "city": "Jaén",
       "active": true,
-      "created_date": "2021-08-05",
+      "created_date": "2021-07-26",
       "imagen_url": "image.png",
-      "termination_date": "2021-09-04",
+      "termination_date": "2021-09-05",
       "id": 1
     },
     {
-      "user": "Albertillo",
-      "password": "0987qwer",
+      "user": "albertillo",
+      "password": "poiu0987",
       "name": "Alberto",
       "surname": "Vicente",
       "company_email": "alberto@empresa.com",
@@ -25,7 +25,7 @@
       "active": true,
       "created_date": "2021-07-26",
       "imagen_url": "image.png",
-      "termination_date": "2021-09-05",
+      "termination_date": "2021-08-31",
       "id": 2
     }
   ]

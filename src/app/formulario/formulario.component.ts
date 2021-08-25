@@ -19,13 +19,18 @@ export class FormularioComponent implements OnInit {
   @Output() personaAnadida: EventEmitter<Persona> = new EventEmitter();
   @Output() personaEditada: Persona = empezar();
 
+  //variable para el resolve
+  person: Persona = empezar();
+
   constructor(
     private formBuilder: FormBuilder,
-    private router: ActivatedRoute,
     private personaService: PersonasService,
     private route: Router,
-    private snackbar: MatSnackBar
-  ) { }
+    private snackbar: MatSnackBar,
+    private router: ActivatedRoute
+  ) { 
+    this.person = this.router.snapshot.data.persona;
+  }
 
   //Cargamos valores por defecto en el formulario
   registerForm = this.formBuilder.group({

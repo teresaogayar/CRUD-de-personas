@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Observable } from "rxjs";
+import { environment } from "src/environments/environment";
 import { Persona } from "./persona";
 
 @Injectable({
@@ -9,7 +10,15 @@ import { Persona } from "./persona";
 export class PersonasService{
     constructor( private httpClient: HttpClient){}
 
-    private url = 'http://localhost:3000/persons'; //url de la bd.json
+    headers(){
+        return{
+            Accept: 'application/json',
+            'Content-Type': 'application/json',
+            'Autorization': 'Bearer'
+        }
+    }
+
+    private url :  string = environment.apiUrl;
    
     //Obtener lista de usuarios
     cargarUsuarios(){
@@ -18,7 +27,10 @@ export class PersonasService{
 
     //Obtener un usuario
     cargarUsuario(id: number): Observable<Persona>{
-        return this.httpClient.get<Persona>(this.url + '/' + id);
+        //Si modificamos la url  de cargarUsuario salta error
+        return this.httpClient.get<Persona>(this.url + '/8' + id, {
+            headers: this.headers() 
+        });
     }
     
     //Crear usuario
