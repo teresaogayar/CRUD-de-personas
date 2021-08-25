@@ -27,7 +27,7 @@ export class PersonasService{
 
     //Obtener un usuario
     cargarUsuario(id: number): Observable<Persona>{
-        //Si modificamos la url  de cargarUsuario salta error
+        //Si modificamos la url  de cargarUsuario salta error, para que funcione quitar el 8
         return this.httpClient.get<Persona>(this.url + '/8' + id, {
             headers: this.headers() 
         });
