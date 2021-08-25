@@ -2,8 +2,9 @@
 <div class="formulario">
     <form  [formGroup]="registerForm">
         <div class="datos">
+            <i class="notificacion">Campos obligatorios (*)</i>
             <div class="form-group">
-                <label for="user">Usuario </label>
+                <label for="user">Usuario <i>*</i></label>
                 <input type="text" id="user" class='form-control' formControlName="user">
                 <div class="error">
                     <span *ngIf='validacionCampos("user")'>
@@ -12,7 +13,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="surname">Apellido </label>
+                <label for="surname">Apellido <i>*</i></label>
                 <input type="text" id="surname" class='form-control' formControlName="surname">
                 <div class="error">
                     <span *ngIf='validacionCampos("surname")'>
@@ -21,7 +22,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="pass">Contraseña </label>
+                <label for="pass">Contraseña <i>*</i></label>
                 <input type="password" id="pass" class='form-control' formControlName="password">
                 <div class="error">
                     <span *ngIf='validacionCampos("password")'>
@@ -30,7 +31,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="name">Nombre </label>
+                <label for="name">Nombre <i>*</i></label>
                 <input type="text" id="name" class='form-control' formControlName="name">
                 <div class="error">
                     <span *ngIf='validacionCampos("name")'>
@@ -39,7 +40,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="compemail">Correo de empresa </label>
+                <label for="compemail">Correo de empresa <i>*</i></label>
                 <input type="email" id="compemail" class='form-control' formControlName="company_email">
                 <div class="error">
                     <span *ngIf='validacionCampos("company_email")'>
@@ -48,7 +49,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="personalemail">Correo personal </label>
+                <label for="personalemail">Correo personal <i>*</i></label>
                 <input type="email" id="personalemail" class='form-control' formControlName="personal_email">
                 <div class="error">
                     <span *ngIf='validacionCampos("personal_email")'>
@@ -57,7 +58,7 @@
                 </div>
             </div>
             <div class="form-group">
-                <label for="city">Ciudad </label>
+                <label for="city">Ciudad <i>*</i></label>
                 <input type="text" id="city" class='form-control' formControlName="city">
                 <div class="error">
                     <span *ngIf='validacionCampos("city")'>
@@ -70,7 +71,7 @@
                 <input type="checkbox" id="active" class='form-control' formControlName="active">
             </div>
             <div class="form-group">
-                <label for="created_date">Fecha creación </label>
+                <label for="created_date">Fecha creación <i>*</i></label>
                 <input type="date" id="created_date" class='form-control' formControlName="created_date">
                 <div class="error">
                     <span *ngIf='validacionCampos("created_date")'>

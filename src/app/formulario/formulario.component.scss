@@ -13,7 +13,9 @@ h2{
     border: 5px solid  rgba(100, 148, 237, 0.61) ;
     border-radius: 4px;
     margin-top: 8px;
-    margin-bottom: 16px;
+    margin-bottom: 26px;
+    margin-left: 500px;
+    margin-right: 500px;
     font-weight: bold;
 }
 form{
@@ -33,11 +35,21 @@ form{
     margin-top: 8px;
     margin-bottom: 20px;
 }
+.notificacion{
+    display: flex;
+    justify-content: center;
+}
+i{
+    font-size: 10px;
+}
+.datos input{
+    width: 350px;
+}
 .form-group{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 .error{
     display: flex;
