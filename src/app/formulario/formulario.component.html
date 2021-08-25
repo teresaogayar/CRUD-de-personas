@@ -5,30 +5,65 @@
             <div class="form-group">
                 <label for="user">Usuario </label>
                 <input type="text" id="user" class='form-control' formControlName="user">
+                <div class="error">
+                    <span *ngIf='validacionCampos("user")'>
+                        Introduce un usuario
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="surname">Apellido </label>
                 <input type="text" id="surname" class='form-control' formControlName="surname">
+                <div class="error">
+                    <span *ngIf='validacionCampos("surname")'>
+                        Introduce un apellido
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="pass">Contraseña </label>
                 <input type="password" id="pass" class='form-control' formControlName="password">
+                <div class="error">
+                    <span *ngIf='validacionCampos("password")'>
+                        Contraseña con al menos 5 caracteres
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="name">Nombre </label>
                 <input type="text" id="name" class='form-control' formControlName="name">
+                <div class="error">
+                    <span *ngIf='validacionCampos("name")'>
+                        Introduce un nombre
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="compemail">Correo de empresa </label>
                 <input type="email" id="compemail" class='form-control' formControlName="company_email">
+                <div class="error">
+                    <span *ngIf='validacionCampos("company_email")'>
+                        Introduce un email
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="personalemail">Correo personal </label>
                 <input type="email" id="personalemail" class='form-control' formControlName="personal_email">
+                <div class="error">
+                    <span *ngIf='validacionCampos("personal_email")'>
+                        Introduce un email
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="city">Ciudad </label>
                 <input type="text" id="city" class='form-control' formControlName="city">
+                <div class="error">
+                    <span *ngIf='validacionCampos("city")'>
+                        Introduce una ciudad
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="active">Active</label>
@@ -37,6 +72,11 @@
             <div class="form-group">
                 <label for="created_date">Fecha creación </label>
                 <input type="date" id="created_date" class='form-control' formControlName="created_date">
+                <div class="error">
+                    <span *ngIf='validacionCampos("created_date")'>
+                        Debes indicar la fecha de creación
+                    </span>
+                </div>
             </div>
             <div class="form-group">
                 <label for="image_url">URL imagen </label>
@@ -50,7 +90,7 @@
         <div class="boxboton">
             <div class="boxcrear">
                 <div *ngIf="this.botonPulsado">
-                    <button class="submit" type="button"  (click)="guardar()">Enviar</button>
+                    <button class="submit"  type="button"  (click)="guardar()">Enviar</button>
                 </div>
             </div>
             <div class="boxlimpiar">

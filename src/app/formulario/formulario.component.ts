@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { ActivatedRoute, Router } from '@angular/router';
 import { empezar, Persona } from '../persona';
@@ -34,14 +34,14 @@ export class FormularioComponent implements OnInit {
 
   //Cargamos valores por defecto en el formulario
   registerForm = this.formBuilder.group({
-    user: [''],
-    password: [''],
-    name: [''],
-    surname: [''],
-    company_email: [''],
-    personal_email: [''],
-    city: [''],
-    active: [true],
+    user: ['', Validators.required],
+    password: ['', [Validators.required, Validators.minLength(8)]],
+    name: ['', Validators.required],
+    surname: ['', Validators.required],
+    company_email: ['', [Validators.required, Validators.email]],
+    personal_email: ['', [Validators.required, Validators.email]],
+    city: ['', Validators.required],
+    active: [true, Validators.required],
     created_date: [''],
     imagen_url: [''],
     termination_date: ['']
@@ -89,14 +89,18 @@ export class FormularioComponent implements OnInit {
 
   //Si no existe añade, si  existe lo edita
   guardar(){
-    if (!this.id) {
-      this.anadirPersona();
-      this.limpiar();
+    if(this.registerForm.invalid){
+      alert("Rellena todos los campos")
     } else {
-      console.log("entra en editar")
-      this.editarPersona();
-      this.limpiar();
-    }
+      if (!this.id) {
+        this.anadirPersona();
+        this.limpiar();
+      } else {
+        console.log("entra en editar")
+        this.editarPersona();
+        this.limpiar();
+      }
+   }
   }
 
 
@@ -128,6 +132,10 @@ export class FormularioComponent implements OnInit {
     this.snackbar.open(mensaje, '✔️',{
       duration:2500
     })
+  }
+
+  validacionCampos(campo: string){
+    return this.registerForm.controls[campo].errors && this.registerForm.controls[campo].touched
   }
 
 }
