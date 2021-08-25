@@ -34,7 +34,7 @@ export class FormularioComponent implements OnInit {
 
   //Cargamos valores por defecto en el formulario
   registerForm = this.formBuilder.group({
-    user: ['', Validators.required],
+    user: ['', [Validators.required, Validators.minLength(5), Validators.max(12)]],
     password: ['', [Validators.required, Validators.minLength(8)]],
     name: ['', Validators.required],
     surname: ['', Validators.required],

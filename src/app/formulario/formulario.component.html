@@ -8,7 +8,7 @@
                 <input type="text" id="user" class='form-control' formControlName="user">
                 <div class="error">
                     <span *ngIf='validacionCampos("user")'>
-                        Introduce un usuario
+                        <i>Introduce un usuario de 5 a 12 caracteres</i>
                     </span>
                 </div>
             </div>
@@ -17,7 +17,7 @@
                 <input type="text" id="surname" class='form-control' formControlName="surname">
                 <div class="error">
                     <span *ngIf='validacionCampos("surname")'>
-                        Introduce un apellido
+                        <i>Introduce un apellido</i>
                     </span>
                 </div>
             </div>
@@ -26,7 +26,7 @@
                 <input type="password" id="pass" class='form-control' formControlName="password">
                 <div class="error">
                     <span *ngIf='validacionCampos("password")'>
-                        Contraseña con al menos 5 caracteres
+                        <i>Contraseña con al menos 5 caracteres</i>
                     </span>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                 <input type="text" id="name" class='form-control' formControlName="name">
                 <div class="error">
                     <span *ngIf='validacionCampos("name")'>
-                        Introduce un nombre
+                        <i>Introduce un nombre</i>
                     </span>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 <input type="email" id="compemail" class='form-control' formControlName="company_email">
                 <div class="error">
                     <span *ngIf='validacionCampos("company_email")'>
-                        Introduce un email
+                        <i>Introduce un email</i>
                     </span>
                 </div>
             </div>
@@ -53,7 +53,7 @@
                 <input type="email" id="personalemail" class='form-control' formControlName="personal_email">
                 <div class="error">
                     <span *ngIf='validacionCampos("personal_email")'>
-                        Introduce un email
+                        <i>Introduce un email</i>
                     </span>
                 </div>
             </div>
@@ -62,7 +62,7 @@
                 <input type="text" id="city" class='form-control' formControlName="city">
                 <div class="error">
                     <span *ngIf='validacionCampos("city")'>
-                        Introduce una ciudad
+                        <i>Introduce una ciudad</i>
                     </span>
                 </div>
             </div>
@@ -75,7 +75,7 @@
                 <input type="date" id="created_date" class='form-control' formControlName="created_date">
                 <div class="error">
                     <span *ngIf='validacionCampos("created_date")'>
-                        Debes indicar la fecha de creación
+                        <i>Debes indicar la fecha de creación</i>
                     </span>
                 </div>
             </div>
