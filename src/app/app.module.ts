@@ -55,6 +55,8 @@ import {​​​​​​​​MatTreeModule}​​​​​​​​ from'@ang
 import {​​​​​​​​OverlayModule}​​​​​​​​ from'@angular/cdk/overlay';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InicioComponent } from './inicio/inicio.component';
+import { PiepaginaComponent } from './piepagina/piepagina.component';
 
 
 
@@ -64,7 +66,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NavegacionComponent,
     PersonaComponent,
     FormularioComponent,
-    TarjetaComponent
+    TarjetaComponent,
+    InicioComponent,
+    PiepaginaComponent
   ],
   imports: [
     BrowserModule,

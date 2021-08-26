@@ -1,0 +1,44 @@
+*{
+    background-color:  white;
+    font-family:'Courier New', Courier, monospace;
+}
+.gif{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -40px;
+}
+.img2{
+    height: 250px;
+    width: 250px;
+}
+.hola{  
+    display: flex;
+    justify-content: center;
+    margin-top:10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.navegacion{
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(181, 202, 241, 0);
+    gap: 8px;
+    margin-top: 30px;
+    margin-left: 15px;
+    padding-bottom: 250px;
+}
+.img1{
+    width: 30px;
+    height: 30px;
+    background-color: rgba(181, 202, 241, 0);
+}
+
+a{
+    background-color: rgba(181, 202, 241, 0);
+}
+
+b{
+    background-color: rgba(181, 202, 241, 0);
+}

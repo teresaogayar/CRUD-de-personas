@@ -1,0 +1,13 @@
+*{
+    background-color:  white;
+    font-family:'Courier New', Courier, monospace;
+}
+.piepagina{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
